@@ -1,18 +1,21 @@
 #!/usr/bin/python3
 import psycopg2
 
-#Function definition
+
+# Function definition
 def connect(database_name="news"):
     try:
         db = psycopg2.connect("dbname={}".format(database_name))
         cursor = db.cursor()
         return db, cursor
-    except:
-        print("<error message>")
+    except Exception as e:
+        print("<error message>\n{}".format(e))
+
 
 def print_result(data):
     for pair in data:
         print('  {} -- {} views'.format(pair[0], pair[1]))
+
 
 # main implementation
 print('\n1. What are the most popular three articles of all time?\n')
