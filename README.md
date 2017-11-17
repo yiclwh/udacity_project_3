@@ -20,7 +20,6 @@ This project is submitted for Udacity Full-Stack Web Developer Project 3 - **Log
     log.path like concat('%',articles.slug,'%') 
     group by articles.author order by clickcount desc
     ```
-  *The view is checked and created in code. No need to create it prior running.*
 
 ## How To Run The Application
 
