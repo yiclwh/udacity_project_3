@@ -2,16 +2,23 @@
 
 ## Introduction
 
-This project is submitted for Udacity Full-Stack Web Developer Project 3 - **Log Analysis**
+This project is submitted for Udacity Full-Stack Web Developer Project 3 - **Log Analysis**.
+
+The python 3 code work with mock PostgreSQL database that could have come from a real-world web application, with fields representing information that a web server would record, such as HTTP status codes and URL paths. The web server and the reporting tool both connect to the same database, allowing information to flow from the web server into the report.
 
 
 ## Contents
+
+* Requirements
+  * Python3
+  * PostgreSQL
+  * psycopg2
 
 * Porject files
   * `loganalysis.py`
   * `README.md`
 
-* Views
+* SQL views
   * `topauthors`
     ```SQL
     create view topauthors as 
@@ -23,12 +30,16 @@ This project is submitted for Udacity Full-Stack Web Developer Project 3 - **Log
 
 ## How To Run The Application
 
-* Using the Terminal:
+* Load *newsdata.sql* using command `psql -d news -f newsdata.sql`
+  * The sql file could also be found [here](https://d17h27t6h515a5.cloudfront.net/topher/2016/August/57b5f748_newsdata/newsdata.zip)
 
-  * Type `python loganalysis.py`
+* Excute python script *loganalysis.py*
+  * Using the Terminal:
 
-* Using the Python IDLE:
+    * Type `python3 loganalysis.py` or `./logsanalysis.py`
 
-  * Select Run from the IDLE menu,
+  * Using the Python IDLE:
 
-  * Click `Run Module` from the dropdown list
+    * Select Run from the IDLE menu,
+
+    * Click `Run Module` from the dropdown list
